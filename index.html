@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Your Personal Password Manager</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Gabarito&family=Roboto&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav{
+            height: 65px;
+            display: flex;
+            align-items: center;
+            font-size: larger;
+            font-weight: 500;
+            background: linear-gradient(to right , rgb(255, 166, 0) , rgb(255, 217, 145));
+        }
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        .body{
+            width: 80vw;
+            margin: auto;
+            font-family: 'Gabarito', sans-serif;
+            font-size: 20px;
+        }
+
+        h1,h2{
+            padding: 10px 0px;
+            margin: 10px 0px;
+            font-size: larger;
+        }
+
+        .btn{
+            padding: 10px 20px;
+            margin: 14px 0px;
+            background: linear-gradient(to right , rgb(255, 166, 0) , rgb(255, 217, 145));
+            color: black;
+            border-radius: 10px;
+        }
+
+        .table{
+
+            border: 2px solid  rgb(255, 166, 0);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact us</li>
+        </ul>
+    </nav>
+    <div class="body">
+        <h1>Password Manager</h1>
+        <p>We are thrilled to have you here your digital life contains a myriad of passwords and we know how challenging it can be to manage them all . thats why we are here to make it easy for you </p>
+        <h2>Your Passwords</h2>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>insta</td>                        
+                        <td>54321</td>                        
+                    </tr>
+                    <tr>
+                        <td>fb</td>                        
+                        <td>12345</td>                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h2>Add a Password</h2>
+        <div class="form">
+            <form action="/submit" method="post">
+                <!-- Text input for username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+            
+                <!-- Password input -->
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" required>
+                <br><br>
+                       
+                <!-- Submit button -->
+                <button class="btn"> Submit</button>
+              </form>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
