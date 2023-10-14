@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassX - Your Personal Password Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Gabarito&family=Roboto&display=swap');
         *{
@@ -48,11 +49,15 @@
             background: linear-gradient(to right , rgb(255, 166, 0) , rgb(255, 217, 145));
             color: black;
             border-radius: 10px;
+            border: 2px solid black;
         }
 
-        .table{
-
-            border: 2px solid  rgb(255, 166, 0);
+        .press{
+            padding: 0px 8px;
+            background: linear-gradient(to right , rgb(255, 166, 0) , rgb(255, 217, 145));
+            color: black;
+            border-radius: 10px;
+            border: 2px solid black;
         }
 
     </style>
@@ -71,38 +76,36 @@
         <p>We are thrilled to have you here your digital life contains a myriad of passwords and we know how challenging it can be to manage them all . thats why we are here to make it easy for you </p>
         <h2>Your Passwords</h2>
         <div class="table">
-            <table>
+            <table class="table">
                 <thead>
-                    <tr>
-                        <th>Website</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Delete</th>
-                    </tr>
+                  <tr>
+                    <th scope="col">Website</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Delete</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>insta</td>                        
-                        <td>54321</td>                        
-                    </tr>
-                    <tr>
-                        <td>fb</td>                        
-                        <td>12345</td>                        
-                    </tr>
+                    
                 </tbody>
-            </table>
+              </table>
         </div>
         <h2>Add a Password</h2>
         <div class="form">
             <form action="/submit" method="post">
+                <!-- Text input for website -->
+                <label for="website">Website:</label>
+                <input type="text" id="website" name="website" required>
+                <br><br>
+
                 <!-- Text input for username -->
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 <br><br>
             
                 <!-- Password input -->
-                <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
                 <br><br>
                        
                 <!-- Submit button -->
@@ -110,6 +113,7 @@
               </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
